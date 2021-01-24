@@ -3,7 +3,6 @@
         permanent
         expand-on-hover
         width="150"
-        style="height: 100%"
         color="#232323"
     >
       <v-list

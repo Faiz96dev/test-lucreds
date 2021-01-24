@@ -1,13 +1,13 @@
 <template>
-  <v-row align="center" justify="center" fluid  class=" cards-wrapper d-flex justify-center mt-4">
-    <v-col style="height:80vh" cols="8">
-  <NotificationList/>
+  <v-row align="center" justify="center" fluid class=" cards-wrapper d-flex justify-center mt-4">
+    <v-col style="height:80vh" cols="9">
+      <NotificationList/>
     </v-col>
-  <v-col class="d-flex flex-column justify-space-between right-block"  cols="3" >
-        <Status class="mb-3"/>
-        <Earnings />
+    <v-col class="d-flex flex-column right-block" cols="2">
+      <Status/>
+      <Earnings/>
     </v-col>
-  </v-row >
+  </v-row>
 </template>
 
 <script>
@@ -27,5 +27,11 @@ export default {
   width: 100%;
   justify-content: space-around;
   align-items: center;
+}
+
+.right-block {
+  height: 80vh;
+  justify-content: space-between;
+  margin-left: 6px;
 }
 </style>

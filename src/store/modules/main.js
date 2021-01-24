@@ -38,22 +38,12 @@ export default {
         ],
     },
     mutations: {
-        // SET_BOARD(state, board) {
-        //     state.board = board;
-        // },
 
     },
     actions: {
-        // fetchFolders({rootState, state, commit, dispatch}) {
-        //
-        // },
 
     },
     getters: {
-        // getCurrentBoard: state => {
-        //     return state.board;
-        // },
-
 
     }
 };

@@ -10,7 +10,7 @@ export default {
 
   props: {
     height: Number,
-    width:Number
+    width: Number
   },
 }
 
@@ -20,7 +20,7 @@ export default {
 .card {
   width: auto;
   height: 100%;
-  padding: 10px;
+  padding: 16px;
   border: 1px solid #7499F5;
   border-radius: 10px;
   background: rgb(11, 175, 171);
