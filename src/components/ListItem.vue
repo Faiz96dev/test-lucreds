@@ -2,16 +2,16 @@
   <div>
     <div class="list-item-wrapper">
       <div class="d-flex align-center">
-        <div class="green-point"></div>
-        <div class="description-block d-flex flex-column ">
-          <p class="list-title">Report</p>
-          <p>Lorem ipsum dolor sit amet, consectetur </p>
+        <div v-if="listObj.isActive" class="green-point"></div>
+        <div  :class="{'ml-6' : !listObj.isActive}" class="description-block d-flex flex-column ">
+          <p class="list-title">{{ listObj.title }}</p>
+          <p>{{ listObj.description}}</p>
         </div>
       </div>
 <!--      <div style="height: 100%" class="d-flex  ">-->
-        <v-btn v-if="withButton" width="150" class="action-btn mr-5">Action</v-btn>
+        <v-btn v-if="listObj.withAction" width="150" class="action-btn mr-5">Action</v-btn>
         <v-progress-linear
-            v-if="withProgressBar"
+            v-if="listObj.progress"
       color="blue lighten-1 "
       rounded
       height="8"
@@ -20,7 +20,7 @@
       class="progress-line"
       value="77"
     ></v-progress-linear>
-        <p class="list-date">03.January 2021</p>
+        <p class="list-date">{{ listObj.date }}</p>
 <!--      </div>-->
     </div>
   <v-divider
@@ -30,23 +30,16 @@
 </template>
 
 <script>
+
 export default {
   name: "ListItem",
   props:{
-    withButton:{
-      type:Boolean,
-      default: false
-    },
-    isActive:{
-      type:Boolean,
-      default: false
-    },
-    withProgressBar:{
-      type:Boolean,
-      default:false
+    listObj:{
+      type:Object,
     },
 
-  }
+  },
+
 }
 </script>
 
@@ -66,6 +59,9 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.list-item-wrapper:hover{
+
 }
 
 

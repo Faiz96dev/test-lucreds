@@ -1,13 +1,13 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import popup from './modules/popup'
+import main from "@/store/modules/main";
 
 Vue.use(Vuex);
 
 const store = new Vuex.Store({
     strict: process.env.NODE_ENV !== 'production',
     modules: {
-        popup,
+        main,
     }
 });
 

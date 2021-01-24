@@ -1,21 +1,23 @@
 <template>
   <v-row align="center" justify="center" fluid  class=" cards-wrapper d-flex justify-center mt-4">
-    <v-col style="height:100%" cols="8">
+    <v-col style="height:80vh" cols="8">
   <NotificationList/>
     </v-col>
-<!--    <v-col  cols="3" >-->
-<!--      <Card style="height: 200px" class="mb-10" >HUI</Card>-->
-<!--      <Card style="height: 200px">HUI</Card>-->
-<!--    </v-col>-->
+  <v-col class="d-flex flex-column justify-space-between right-block"  cols="3" >
+        <Status class="mb-3"/>
+        <Earnings />
+    </v-col>
   </v-row >
 </template>
 
 <script>
 import NotificationList from "@/components/Home/NotificationList";
+import Status from "@/components/Home/Status";
+import Earnings from "@/components/Home/Earnings";
 
 export default {
   name: "Home",
-  components: {NotificationList}
+  components: {Earnings, Status, NotificationList}
 }
 </script>
 
